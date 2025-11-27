@@ -1,0 +1,25 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_0_229" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16 0H0V64H64V0H48C54.6274 0 60 5.37258 60 12V44C60 50.6274 54.6274 56 48 56H16C9.37258 56 4 50.6274 4 44V12C4 5.37258 9.37258 0 16 0Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_0_229)">
+<g style="mix-blend-mode:multiply" opacity="0.5" filter="url(#filter0_f_0_229)">
+<path d="M46 4C52.6274 4 58 9.37258 58 16V44C58 50.6274 52.6274 56 46 56H18C11.3726 56 6 50.6274 6 44V16C6 9.37258 11.3726 4 18 4H46Z" fill="#FF5C00"/>
+</g>
+<g style="mix-blend-mode:multiply" opacity="0.5" filter="url(#filter1_f_0_229)">
+<path d="M46 6C52.6274 6 58 11.3726 58 18V46C58 52.6274 52.6274 58 46 58H18C11.3726 58 6 52.6274 6 46V18C6 11.3726 11.3726 6 18 6H46Z" fill="#FF5C00"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_0_229" x="2" y="0" width="60" height="60" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_0_229"/>
+</filter>
+<filter id="filter1_f_0_229" x="0" y="0" width="64" height="64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="3" result="effect1_foregroundBlur_0_229"/>
+</filter>
+</defs>
+</svg>

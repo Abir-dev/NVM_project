@@ -1,0 +1,311 @@
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
+
+:root {
+  --body-body-lg-font-family: "Urbanist", Helvetica;
+  --body-body-lg-font-size: 18px;
+  --body-body-lg-font-style: normal;
+  --body-body-lg-font-weight: 500;
+  --body-body-lg-letter-spacing: 0px;
+  --body-body-lg-line-height: 23.989999771118164px;
+  --body-body-sm-font-family: "Urbanist", Helvetica;
+  --body-body-sm-font-size: 14px;
+  --body-body-sm-font-style: normal;
+  --body-body-sm-font-weight: 500;
+  --body-body-sm-letter-spacing: 0px;
+  --body-body-sm-line-height: 18.65999984741211px;
+  --body-body-xs-font-family: "Urbanist", Helvetica;
+  --body-body-xs-font-size: 12px;
+  --body-body-xs-font-style: normal;
+  --body-body-xs-font-weight: 400;
+  --body-body-xs-letter-spacing: 0px;
+  --body-body-xs-line-height: 15.989999771118164px;
+  --body-body-xss-font-family: "Urbanist", Helvetica;
+  --body-body-xss-font-size: 10px;
+  --body-body-xss-font-style: normal;
+  --body-body-xss-font-weight: 400;
+  --body-body-xss-letter-spacing: 0px;
+  --body-body-xss-line-height: 12px;
+  --button-button-medium-font-family: "Urbanist", Helvetica;
+  --button-button-medium-font-size: 14px;
+  --button-button-medium-font-style: normal;
+  --button-button-medium-font-weight: 600;
+  --button-button-medium-letter-spacing: 0px;
+  --button-button-medium-line-height: 120.00000762939453%;
+  --button-button-small-font-family: "Urbanist", Helvetica;
+  --button-button-small-font-size: 12px;
+  --button-button-small-font-style: normal;
+  --button-button-small-font-weight: 600;
+  --button-button-small-letter-spacing: 0px;
+  --button-button-small-line-height: 120.00000762939453%;
+  --greyscale-0: rgba(255, 255, 255, 1);
+  --greyscale-900: rgba(13, 13, 18, 1);
+  --heading-h2-bold-font-family: "Urbanist", Helvetica;
+  --heading-h2-bold-font-size: 40px;
+  --heading-h2-bold-font-style: normal;
+  --heading-h2-bold-font-weight: 700;
+  --heading-h2-bold-letter-spacing: 0px;
+  --heading-h2-bold-line-height: 120.00000762939453%;
+  --heading-h2-semibold-font-family: "Urbanist", Helvetica;
+  --heading-h2-semibold-font-size: 40px;
+  --heading-h2-semibold-font-style: normal;
+  --heading-h2-semibold-font-weight: 600;
+  --heading-h2-semibold-letter-spacing: 0px;
+  --heading-h2-semibold-line-height: 120.00000762939453%;
+  --heading-h6-semibold-font-family: "Urbanist", Helvetica;
+  --heading-h6-semibold-font-size: 20px;
+  --heading-h6-semibold-font-style: normal;
+  --heading-h6-semibold-font-weight: 600;
+  --heading-h6-semibold-letter-spacing: 0px;
+  --heading-h6-semibold-line-height: 130%;
+  --text-text-2-medium-font-family: "Urbanist", Helvetica;
+  --text-text-2-medium-font-size: 18px;
+  --text-text-2-medium-font-style: normal;
+  --text-text-2-medium-font-weight: 500;
+  --text-text-2-medium-letter-spacing: 0px;
+  --text-text-2-medium-line-height: 130%;
+  --text-text-3-medium-font-family: "Urbanist", Helvetica;
+  --text-text-3-medium-font-size: 16px;
+  --text-text-3-medium-font-style: normal;
+  --text-text-3-medium-font-weight: 500;
+  --text-text-3-medium-letter-spacing: 0px;
+  --text-text-3-medium-line-height: 130%;
+  --text-text-4-reguler-font-family: "Urbanist", Helvetica;
+  --text-text-4-reguler-font-size: 14px;
+  --text-text-4-reguler-font-style: normal;
+  --text-text-4-reguler-font-weight: 400;
+  --text-text-4-reguler-letter-spacing: 0px;
+  --text-text-4-reguler-line-height: 130%;
+  --text-text-4-semibold-font-family: "Urbanist", Helvetica;
+  --text-text-4-semibold-font-size: 14px;
+  --text-text-4-semibold-font-style: normal;
+  --text-text-4-semibold-font-weight: 600;
+  --text-text-4-semibold-letter-spacing: 0px;
+  --text-text-4-semibold-line-height: 130%;
+  --text-text-5-medium-font-family: "Urbanist", Helvetica;
+  --text-text-5-medium-font-size: 12px;
+  --text-text-5-medium-font-style: normal;
+  --text-text-5-medium-font-weight: 500;
+  --text-text-5-medium-letter-spacing: 0px;
+  --text-text-5-medium-line-height: 140%;
+  --text-text-5-reguler-font-family: "Urbanist", Helvetica;
+  --text-text-5-reguler-font-size: 12px;
+  --text-text-5-reguler-font-style: normal;
+  --text-text-5-reguler-font-weight: 400;
+  --text-text-5-reguler-letter-spacing: 0px;
+  --text-text-5-reguler-line-height: 140%;
+  --text-text-5-semibold-font-family: "Urbanist", Helvetica;
+  --text-text-5-semibold-font-size: 12px;
+  --text-text-5-semibold-font-style: normal;
+  --text-text-5-semibold-font-weight: 600;
+  --text-text-5-semibold-letter-spacing: 0px;
+  --text-text-5-semibold-line-height: 140%;
+  --text-text-6-medium-font-family: "Urbanist", Helvetica;
+  --text-text-6-medium-font-size: 10px;
+  --text-text-6-medium-font-style: normal;
+  --text-text-6-medium-font-weight: 500;
+  --text-text-6-medium-letter-spacing: 0px;
+  --text-text-6-medium-line-height: 140%;
+  --text-text-6-reguler-font-family: "Urbanist", Helvetica;
+  --text-text-6-reguler-font-size: 10px;
+  --text-text-6-reguler-font-style: normal;
+  --text-text-6-reguler-font-weight: 400;
+  --text-text-6-reguler-letter-spacing: 0px;
+  --text-text-6-reguler-line-height: 140%;
+}
+
+:root {
+  --animate-spin: spin 1s linear infinite;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-fade-up {
+  animation: fade-up 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-marquee {
+  animation: marquee var(--duration) infinite linear;
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration) linear infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 8s infinite;
+}
+
+.animate-spin {
+  animation: var(--animate-spin);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes image-glow {
+  0% {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.74, 0.25, 0.76, 1);
+  }
+
+  10% {
+    opacity: 0.7;
+    animation-timing-function: cubic-bezier(0.12, 0.01, 0.08, 0.99);
+  }
+
+  to {
+    opacity: 0.4;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes shimmer {
+  0%,
+  90%,
+  to {
+    background-position: calc(-100% - var(--shimmer-width)) 0;
+  }
+
+  30%,
+  60% {
+    background-position: calc(100% + var(--shimmer-width)) 0;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  0% {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: transparent;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+
+    --card: transparent;
+    --card-foreground: 213 31% 91%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 216 34% 17%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
