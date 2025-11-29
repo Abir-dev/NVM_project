@@ -20,11 +20,36 @@ export const Sidebar: React.FC<SidebarProps> = ({
   onExpandedChange,
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState<number>(0);
+  const [selectedSection, setSelectedSection] = useState<
+    "navigation" | "bottom"
+  >("navigation");
 
   const handleToggle = () => {
     const newState = !isExpanded;
     setIsExpanded(newState);
     onExpandedChange?.(newState);
+  };
+
+  // Map regular icons to their orange variants
+  const getOrangeIcon = (icon: string): string => {
+    const iconMap: { [key: string]: string } = {
+      "/icon-reverse.svg": "/icon-7.svg",
+      "/icon-6.svg": "/icon-orange-1.svg",
+      "/icon-11.svg": "/icon-orange-2.svg",
+      "/icon-5.svg": "/icon-orange-3.svg",
+      "/icon-2.svg": "/icon-orange-5.svg",
+      "/icon-14.svg": "/icon-orange-6.svg",
+      "/icon-12.svg": "/icon-orange-9.svg",
+      "/sidebar-menu-1.svg": "/icon-orange-7.svg",
+      "/sidebar-menu.svg": "/icon-orange-8.svg",
+    };
+    return iconMap[icon] || icon;
+  };
+
+  const handleItemClick = (index: number, section: "navigation" | "bottom") => {
+    setSelectedIndex(index);
+    setSelectedSection(section);
   };
 
   return (
@@ -66,53 +91,69 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
       <nav className="flex-col items-start gap-1 pt-4 pb-0 px-0 flex-1 grow flex relative self-stretch w-full">
         <div className="flex flex-col items-start justify-center gap-2 p-2 relative self-stretch w-full flex-[0_0_auto] bg-[#f7f7f7] rounded-[20px]">
-          {navigationItems.map((item, index) => (
-            <Button
-              key={index}
-              variant="ghost"
-              className={`items-center gap-3 flex-[0_0_auto] flex relative self-stretch w-full h-10 p-2 hover:bg-white hover:bg-opacity-50 rounded-lg transition-colors justify-start ${
-                index === 0 ? "bg-white bg-opacity-30" : ""
-              }`}
-            >
-              <img
-                className={`relative flex-shrink-0 transition-all ${
-                  isExpanded ? "w-6 h-6" : "w-8 h-8"
+          {navigationItems.map((item, index) => {
+            const isSelected =
+              selectedSection === "navigation" && selectedIndex === index;
+            const iconSrc = isSelected ? getOrangeIcon(item.icon) : item.icon;
+
+            return (
+              <Button
+                key={index}
+                variant="ghost"
+                onClick={() => handleItemClick(index, "navigation")}
+                className={`items-center gap-3 flex-[0_0_auto] flex relative self-stretch w-full h-10 p-2 hover:bg-white hover:bg-opacity-50 rounded-lg transition-all duration-300 justify-start ${
+                  isSelected ? "bg-white bg-opacity-30 scale-105" : ""
                 }`}
-                alt={item.alt}
-                src={item.icon}
-              />
-              {isExpanded && (
-                <span className="text-sm font-medium text-[#121212] truncate">
-                  {item.label}
-                </span>
-              )}
-            </Button>
-          ))}
+              >
+                <img
+                  className={`relative flex-shrink-0 transition-all duration-300 ease-in-out ${
+                    isExpanded ? "w-6 h-6" : "w-8 h-8"
+                  } ${isSelected ? "brightness-110" : ""}`}
+                  alt={item.alt}
+                  src={iconSrc}
+                />
+                {isExpanded && (
+                  <span className="text-sm font-medium text-[#121212] truncate">
+                    {item.label}
+                  </span>
+                )}
+              </Button>
+            );
+          })}
         </div>
 
         <div className="w-full h-px bg-gradient-to-r from-transparent via-[#e7e7e7] to-transparent my-2" />
 
         <div className="flex flex-col items-start justify-center gap-2 p-2 relative self-stretch w-full flex-[0_0_auto] bg-[#f7f7f7] rounded-[20px]">
-          {bottomItems.map((item, index) => (
-            <Button
-              key={index}
-              variant="ghost"
-              className="items-center gap-3 flex-[0_0_auto] flex relative self-stretch w-full h-10 p-2 hover:bg-white hover:bg-opacity-50 rounded-lg transition-colors justify-start"
-            >
-              <img
-                className={`relative flex-shrink-0 transition-all ${
-                  isExpanded ? "w-6 h-6" : "w-8 h-8"
+          {bottomItems.map((item, index) => {
+            const isSelected =
+              selectedSection === "bottom" && selectedIndex === index;
+            const iconSrc = isSelected ? getOrangeIcon(item.icon) : item.icon;
+
+            return (
+              <Button
+                key={index}
+                variant="ghost"
+                onClick={() => handleItemClick(index, "bottom")}
+                className={`items-center gap-3 flex-[0_0_auto] flex relative self-stretch w-full h-10 p-2 hover:bg-white hover:bg-opacity-50 rounded-lg transition-all duration-300 justify-start ${
+                  isSelected ? "bg-white bg-opacity-30 scale-105" : ""
                 }`}
-                alt={item.alt}
-                src={item.icon}
-              />
-              {isExpanded && (
-                <span className="text-sm font-medium text-[#121212] truncate">
-                  {item.label}
-                </span>
-              )}
-            </Button>
-          ))}
+              >
+                <img
+                  className={`relative flex-shrink-0 transition-all duration-300 ease-in-out ${
+                    isExpanded ? "w-6 h-6" : "w-8 h-8"
+                  } ${isSelected ? "brightness-110" : ""}`}
+                  alt={item.alt}
+                  src={iconSrc}
+                />
+                {isExpanded && (
+                  <span className="text-sm font-medium text-[#121212] truncate">
+                    {item.label}
+                  </span>
+                )}
+              </Button>
+            );
+          })}
         </div>
       </nav>
 

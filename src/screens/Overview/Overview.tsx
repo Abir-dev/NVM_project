@@ -5,12 +5,12 @@ import { HeaderSection } from "./sections/HeaderSection";
 import { Sidebar } from "../../components/sidebar";
 
 const navigationItems = [
-  { icon: "/icon-7.svg", label: "Dashboard", alt: "Dashboard" },
+  { icon: "/icon-reverse.svg", label: "Dashboard", alt: "Dashboard" },
   { icon: "/icon-6.svg", label: "Clients", alt: "Clients" },
   { icon: "/icon-11.svg", label: "Chat", alt: "Chat" },
   { icon: "/icon-5.svg", label: "Bookings", alt: "Bookings" },
   { icon: "/icon-2.svg", label: "Booking Tools", alt: "Booking Tools" },
-  { icon: "/icon-10.svg", label: "Calendar", alt: "Calendar" },
+  { icon: "/icon-14.svg", label: "Calendar", alt: "Calendar" },
   { icon: "/icon-12.svg", label: "My Profile", alt: "My Profile" },
   // { icon: "/icon-13.svg", label: "Settings", alt: "Settings" },
   // { icon: "/icon-1.svg", label: "Help & Support", alt: "Help & Support" },
