@@ -29,7 +29,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
   return (
     <aside
-      className={`fixed left-0 top-0 h-screen flex flex-col items-start gap-[26px] p-5 bg-white transition-all duration-300 z-50 ${
+      className={`fixed left-0 top-0 h-screen flex flex-col items-start gap-[25px] p-4 bg-white transition-all duration-300 z-50 ${
         isExpanded ? "w-64 rounded-r-3xl shadow-lg" : "w-[92px]"
       }`}
     >

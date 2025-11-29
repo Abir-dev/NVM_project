@@ -12,8 +12,8 @@ const navigationItems = [
   { icon: "/icon-2.svg", label: "Booking Tools", alt: "Booking Tools" },
   { icon: "/icon-10.svg", label: "Calendar", alt: "Calendar" },
   { icon: "/icon-12.svg", label: "My Profile", alt: "My Profile" },
-  { icon: "/icon-13.svg", label: "Settings", alt: "Settings" },
-  { icon: "/icon-1.svg", label: "Help & Support", alt: "Help & Support" },
+  // { icon: "/icon-13.svg", label: "Settings", alt: "Settings" },
+  // { icon: "/icon-1.svg", label: "Help & Support", alt: "Help & Support" },
 ];
 
 const bottomItems = [
