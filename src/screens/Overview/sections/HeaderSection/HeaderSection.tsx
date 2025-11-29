@@ -9,7 +9,7 @@ import { Separator } from "../../../../components/ui/separator";
 
 export const HeaderSection = (): JSX.Element => {
   return (
-    <header className="flex items-center justify-end gap-[166px] px-6 py-4 w-full bg-white">
+    <header className="flex items-center justify-end gap-4 md:gap-12 lg:gap-[166px] px-6 py-4 w-full bg-white">
       <div className="inline-flex items-center gap-4">
         <MenuIcon className="w-6 h-6 text-[#121212]" />
 
@@ -21,7 +21,7 @@ export const HeaderSection = (): JSX.Element => {
             <AvatarFallback>HC</AvatarFallback>
           </Avatar>
 
-          <div className="flex flex-col w-[175px] items-start justify-center gap-1 pr-3">
+          <div className="flex flex-col w-full max-w-[175px] items-start justify-center gap-1 pr-3">
             <div className="w-fit text-[length:var(--text-text-3-medium-font-size)] leading-[var(--text-text-3-medium-line-height)] whitespace-nowrap font-text-text-3-medium font-[number:var(--text-text-3-medium-font-weight)] text-[#121212] tracking-[var(--text-text-3-medium-letter-spacing)] [font-style:var(--text-text-3-medium-font-style)]">
               Hanna Calzoni
             </div>

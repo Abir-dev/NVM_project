@@ -274,7 +274,7 @@ const inventoryData = [
 
 export const DashboardContentSection = (): JSX.Element => {
   return (
-    <section className="flex flex-col items-start gap-6 p-5 flex-1 self-stretch w-full bg-[#f7f7f7] rounded-[20px_0px_0px_0px]">
+    <section className="flex flex-col items-start gap-6 p-5 flex-1 self-stretch w-full bg-[#f7f7f7] rounded-[20px_0px_0px_0px] overflow-x-hidden">
       <header className="flex items-center justify-between self-stretch w-full">
         <div className="inline-flex flex-col items-start gap-2">
           <h1 className="mt-[-1.00px] text-[length:var(--heading-h2-semibold-font-size)] leading-[var(--heading-h2-semibold-line-height)] font-heading-h2-semibold font-[number:var(--heading-h2-semibold-font-weight)] text-[#121212] tracking-[var(--heading-h2-semibold-letter-spacing)] whitespace-nowrap [font-style:var(--heading-h2-semibold-font-style)]">
@@ -327,13 +327,13 @@ export const DashboardContentSection = (): JSX.Element => {
       </header>
 
       <div className="flex flex-col lg:flex-row items-start gap-5 flex-1 self-stretch w-full">
-        <div className="flex flex-col items-start gap-5 w-full lg:w-[644px]">
+        <div className="flex flex-col items-start gap-5 w-full lg:max-w-[644px] min-w-0">
           <div className="flex flex-col w-full items-start gap-5">
             <div className="flex flex-col sm:flex-row items-center gap-5 self-stretch w-full">
               {metricsData.slice(0, 2).map((metric, index) => (
                 <Card
                   key={index}
-                  className={`flex flex-col w-full sm:w-[312px] items-start gap-4 p-4 rounded-2xl overflow-hidden border-0 ${
+                  className={`flex flex-col w-full sm:flex-1 sm:min-w-0 sm:max-w-[312px] items-start gap-4 p-4 rounded-2xl overflow-hidden border-0 ${
                     metric.gradient
                       ? "shadow-[0px_12px_20px_#f4642566] bg-[linear-gradient(223deg,rgba(244,100,37,1)_17%,rgba(245,180,11,1)_100%)]"
                       : "bg-white"
@@ -412,11 +412,11 @@ export const DashboardContentSection = (): JSX.Element => {
               ))}
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center gap-5 self-stretch w-full">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap items-center gap-5 self-stretch w-full">
               {metricsData.slice(2, 4).map((metric, index) => (
                 <Card
                   key={index}
-                  className="flex flex-col w-full sm:w-[312px] items-start gap-4 p-4 bg-white rounded-2xl overflow-hidden border-0"
+                  className="flex flex-col w-full sm:flex-1 sm:min-w-0 sm:max-w-[312px] items-start gap-4 p-4 bg-white rounded-2xl overflow-hidden border-0"
                 >
                   <CardContent className="p-0 w-full space-y-4">
                     <div className="inline-flex items-center gap-3">
@@ -496,7 +496,7 @@ export const DashboardContentSection = (): JSX.Element => {
                   ))}
                 </div>
 
-                <div className="w-[556px] items-center left-12 bottom-3 flex justify-between absolute">
+                <div className="w-full max-w-[556px] items-center left-3 md:left-12 bottom-3 flex justify-between absolute">
                   {xAxisLabels.map((label, index) => (
                     <div
                       key={index}
@@ -507,7 +507,7 @@ export const DashboardContentSection = (): JSX.Element => {
                   ))}
                 </div>
 
-                <div className="flex flex-col w-[560px] h-[286px] items-start justify-between absolute top-0 left-11">
+                <div className="flex flex-col w-full max-w-[560px] h-[286px] items-start justify-between absolute top-0 left-6 md:left-11">
                   {[...Array(8)].map((_, index) => (
                     <img
                       key={index}
@@ -519,14 +519,14 @@ export const DashboardContentSection = (): JSX.Element => {
                     />
                   ))}
 
-                  <div className="absolute top-px left-[30px] w-[499px] h-[285px]">
+                  <div className="absolute top-px left-6 md:left-[30px] w-full max-w-[499px] h-[285px]">
                     <img
-                      className="absolute top-[99px] -left-0.5 w-[502px] h-[147px]"
+                      className="absolute top-[99px] -left-0.5 w-full max-w-[502px] h-[147px]"
                       alt="Line chart"
                       src="/line-chart.svg"
                     />
 
-                    <div className="absolute top-0 left-[130px] w-[108px] h-[285px]">
+                    <div className="absolute top-0 left-[130px] w-[108px] h-[285px] md:left-[130px] lg:left-[130px] sm:left-[80px]">
                       <img
                         className="absolute -top-px left-[7px] w-0.5 h-[287px]"
                         alt="Line"
@@ -594,7 +594,7 @@ export const DashboardContentSection = (): JSX.Element => {
                     ))}
                   </div>
 
-                  <div className="flex w-[576px] items-center justify-between absolute left-7 bottom-0">
+                    <div className="flex w-full max-w-[576px] items-center justify-between absolute left-7 bottom-0">
                     {topArtistsBarData.map((artist, index) => (
                       <div
                         key={index}
@@ -606,12 +606,12 @@ export const DashboardContentSection = (): JSX.Element => {
                   </div>
 
                   <img
-                    className="absolute top-2.5 left-12 w-[556px] h-[225px]"
+                    className="absolute top-2.5 left-12 w-full max-w-[556px] h-[225px]"
                     alt="Divider"
                     src="/divider.png"
                   />
 
-                  <div className="absolute top-2.5 left-[45px] w-[548px] h-[220px] flex items-end">
+                  <div className="absolute top-2.5 left-[45px] w-full max-w-[548px] h-[220px] flex items-end md:left-[45px] sm:left-[25px]">
                     <div className="w-11 h-[164px] bg-[#fff5ed] rounded-[999px]" />
                     <div className="h-[220px] ml-[90px] bg-[#fff5ed] w-11 rounded-[999px]" />
                     <div className="h-[140px] ml-[82px] bg-[linear-gradient(223deg,rgba(255,92,0,1)_17%,rgba(245,180,11,1)_100%)] w-11 rounded-[999px]" />
@@ -663,7 +663,7 @@ export const DashboardContentSection = (): JSX.Element => {
               </div>
 
               <div className="flex flex-col items-center gap-5 self-stretch w-full">
-                <div className="relative w-[280px] h-[280px] flex items-center justify-center">
+                <div className="relative w-full max-w-[280px] aspect-square flex items-center justify-center">
                   <svg viewBox="0 0 200 200" className="w-full h-full transform -rotate-90">
                     <defs>
                       <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -738,7 +738,7 @@ export const DashboardContentSection = (): JSX.Element => {
           </Card>
         </div>
 
-        <div className="flex flex-col w-full lg:w-[644px] items-start gap-5 self-stretch">
+        <div className="flex flex-col w-full lg:max-w-[644px] min-w-0 items-start gap-5 self-stretch">
           <Card className="flex flex-col h-[432px] items-start gap-5 p-5 self-stretch w-full bg-white rounded-[20px] overflow-hidden border-0">
             <CardContent className="p-0 w-full flex flex-col gap-5 flex-1">
               <div className="flex items-center justify-between self-stretch w-full">
